@@ -5,12 +5,8 @@
 
 'use strict';
 
-var base = './lib/';
+var base = './src/';
 var nodeVersion = process.versions.node;
-var major = Number(nodeVersion.split('.')[0]);
-if (major >= 4) {
-  base = './src/';
-}
 
 var securityModules = require(base + 'security/index');
 
@@ -24,5 +20,4 @@ module.exports = {
 for (var i in securityModules) {
   module.exports[i] = securityModules[i];
 }
-
 
