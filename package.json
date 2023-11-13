@@ -21,21 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/loopbackio/strong-soap.git"
+    "url": "git@github.com:altea-allys/strong-soap.git"
   },
   "main": "./index.js",
   "directories": {
     "lib": "./lib"
   },
   "scripts": {
-    "postinstall": "husky install",
-    "build": "babel src --source-maps --out-dir=lib",
-    "prepublishOnly": "pinst --disable && npm run build",
-    "postpublish": "pinst --enable",
-    "toc": "doctoc Readme.md --github --maxlevel 3",
-    "_pretest": "jshint index.js lib test",
-    "test": "nyc --reporter=lcov mocha --exit --timeout 60000 test/*-test.js test/security/*.js"
-  },
+    "build": "babel src --source-maps --out-dir=lib"
+    },
   "keywords": [
     "soap"
   ],
@@ -57,7 +51,6 @@
     "express": "^4.18.2",
     "express-ntlm": "2.6.2",
     "glob": "^8.1.0",
-    "husky": "^8.0.3",
     "jshint": "^2.13.6",
     "mocha": "^9.2.2",
     "nyc": "^15.1.0",
